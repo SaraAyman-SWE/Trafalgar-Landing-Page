@@ -1,0 +1,551 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Light: 300
+Default: 400
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #000000
+- Secondary: #7D7987
+
+- Others:
+  - logo: #233348
+  - nav-item: #1F1534
+  - btn:  - #458FF6
+          - #FFFFFF
+  - reviews & footer: 
+    Shades: - #67C3F3 
+            - #5A98F2 
+  - links: #4089ED
+
+--- 03 SHADOWS
+
+10px 40px 50px rgba(229, 233, 246, 0.4)
+// Jonas: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 04 BORDER-RADIUS
+
+Default: 20px
+Medium: 24px
+
+--- 05 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* logo */
+  --light-navy: #233348;
+  /* nav-item */
+  --dark-navy: #1f1534;
+  /* reviews & footer */
+  --light-turquoise: #67c3f3;
+  --dark-turquoise: #5a98f2;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  line-height: 1;
+  font-weight: 300;
+}
+
+/**************************/
+/* GENERAL REUSABLE COMPONENTS */
+/**************************/
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+@media (max-width: 700px) {
+  *,
+  body {
+    font-size: 10px;
+  }
+  .d-flex {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin-right: 0 !important;
+  }
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.col {
+  width: 50%;
+}
+
+.me-1 {
+  margin-right: 1rem;
+}
+
+.me-4 {
+  margin-right: 4rem;
+}
+
+.p-0 {
+  padding-bottom: 0;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
+.pb-4 {
+  padding-bottom: 4rem;
+}
+
+/* ------------------------ */
+/* FONT Weight */
+/* ------------------------ */
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-semi-bold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+/* ------------------------ */
+/* FONT SIZE */
+/* ------------------------ */
+
+/* 18 */
+.fs-1 {
+  font-size: 1.125rem;
+}
+/* 19 */
+.fs-2 {
+  font-size: 1.1875rem;
+}
+/* 21 */
+.fs-3 {
+  font-size: 1.3125rem;
+}
+
+/* ------------------------ */
+/* TEXT COLORS */
+/* ------------------------ */
+
+.text-primary {
+  color: #000000;
+}
+
+.text-secondary {
+  color: #7d7987;
+}
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+
+/* HEADINGS STYLE */
+h1 {
+  font-size: 3rem;
+  color: #000000;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.3125rem;
+  padding-bottom: 1rem;
+  line-height: 1.4;
+}
+
+h1,
+h2 {
+  padding-bottom: 2rem;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+p {
+  padding-bottom: 3rem;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+.section-padding {
+  padding-bottom: 14rem;
+}
+
+.border-bottom {
+  border: 1px solid #000000;
+  width: 10%;
+  margin-bottom: 2rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* BUTTONS */
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1.2rem 3rem;
+  border-radius: 55px;
+  cursor: pointer;
+}
+.btn-full {
+  border: none;
+  background-color: #458ff6;
+  color: #ffffff;
+}
+
+.btn-outline {
+  border-color: #458ff6;
+  color: #458ff6;
+  background-color: #ffffff;
+}
+
+.link-primary {
+  color: #4089ed;
+  text-decoration: none;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: white;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+  margin-right: 2rem;
+}
+
+.card-last {
+  margin-right: 0;
+}
+
+.cards {
+  margin-bottom: 2rem;
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/* HEADER */
+/*    Navbar */
+.navbar-nav {
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.nav-item {
+  margin-right: 1.5rem;
+}
+
+.nav-item-last {
+  margin-right: 0;
+}
+
+.nav-link {
+  color: var(--dark-navy);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+.active {
+  opacity: 1;
+}
+/*    /Navbar */
+/*    Banner */
+.banner {
+  position: relative;
+}
+.banner::before {
+  content: url("img/dots-banner.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  left: -12.5%;
+  top: -5%;
+}
+/*    /Banner */
+/* /HEADER */
+
+/* main */
+/*    Services Section */
+.services-article {
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  width: 100%;
+  padding: 2rem;
+  height: 18.75rem;
+}
+
+.card-img {
+  height: 7rem;
+  padding-bottom: 2rem;
+}
+
+.services {
+  position: relative;
+}
+.services::before {
+  content: url("img/dots-services.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  right: 7.5%;
+  top: 39%;
+  z-index: -1;
+}
+.services::after {
+  content: "";
+  width: 53.3rem;
+  height: 60.5rem;
+  background: url("img/bg-services.png") no-repeat center center;
+  background-size: 100%;
+  display: inline-block;
+  position: absolute;
+  max-width: 100%;
+  left: 0%;
+  bottom: 25%;
+  z-index: -1;
+}
+/*    /Services Section */
+/*    Providers Section */
+.providers {
+  position: relative;
+}
+.providers-article {
+  padding-left: 4rem;
+}
+.providers::before {
+  content: url("img/dots-providers.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 70%;
+}
+/*    /Providers Section */
+/*    Reviews Section */
+.review-container {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 6rem 8rem;
+  color: #ffffff;
+  background: linear-gradient(
+    208.18deg,
+    var(--light-turquoise) 9.05%,
+    var(--dark-turquoise) 76.74%
+  );
+  border-radius: 24px;
+  position: relative;
+}
+
+.review-container hr {
+  border: 1px solid #ffffff;
+  width: 8%;
+  margin-bottom: 3rem;
+}
+
+.review-container p {
+  padding-bottom: 0;
+}
+
+.customer-img {
+  margin-right: 1rem;
+}
+
+.customer-name h4 {
+  padding-bottom: 0.5rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #5b9bf3;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.dot-fill {
+  opacity: 1;
+}
+
+.review-container::before {
+  content: url("img/dots-reviews-left.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  left: -3.5%;
+  bottom: 5%;
+  z-index: -1;
+}
+
+.review-container::after {
+  content: url("img/dots-reviews-right.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  right: -3.2%;
+  top: -2%;
+}
+
+/*    /Reviews Section */
+/*    Check Section */
+.check {
+  position: relative;
+}
+.card-body {
+  padding: 0 2rem 2rem 2rem;
+}
+
+.card-body h4 {
+  height: 8.56vh;
+}
+
+.card2-img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  padding-bottom: 2rem;
+}
+
+.check::before {
+  content: url("img/dots-check.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  left: 7%;
+  top: 9%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.check::after {
+  content: url("img/bg-check.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  right: 0%;
+  bottom: 30%;
+  z-index: -1;
+}
+
+/*    /Check Section */
+/* main */
+
+/* footer */
+.footer {
+  background: linear-gradient(
+    183.41deg,
+    var(--light-turquoise) -8.57%,
+    var(--dark-turquoise) 82.96%
+  );
+  color: #ffffff;
+  padding: 6rem 0;
+  letter-spacing: 0.07rem;
+  position: relative;
+}
+.footer::before {
+  content: url("img/dots-footer-left.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+}
+
+.footer::after {
+  content: url("img/dots-footer-right.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  right: 4%;
+  top: -15%;
+  z-index: -1;
+}
+/* /footer */
